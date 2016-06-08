@@ -33,6 +33,8 @@ end
 default['snmp']['service'] = 'snmpd'
 
 default['snmp']['community'] = 'public'
+default['snmp']['rocommunity'] = []
+default['snmp']['rwcommunity'] = []
 default['snmp']['sec_name'] = { 'notConfigUser' => %w(default) }
 default['snmp']['sec_name6'] = { 'notConfigUser' => %w(default) }
 default['snmp']['groups']['v1'] = { 'notConfigGroup' => %w(notConfigUser) }
@@ -41,7 +43,7 @@ default['snmp']['syslocationVirtual'] = 'Virtual Server'
 default['snmp']['syslocationPhysical'] = 'Server Room'
 default['snmp']['syscontact'] = 'Root <root@localhost>'
 default['snmp']['full_systemview'] = false
-default['snmp']['trapcommunity'] = 'public'
+default['snmp']['trapcommunity'] = []
 default['snmp']['trapsinks'] = []
 default['snmp']['process_monitoring']['proc'] = []
 default['snmp']['process_monitoring']['procfix'] = []
@@ -56,6 +58,7 @@ default['snmp']['all_disk_min'] = 100    # 100K
 default['snmp']['disks'] = []
 default['snmp']['load_average'] = []
 default['snmp']['extend_scripts'] = {}
+default['snmp']['additional_settings'] = {}
 
 # Debian default file options
 default['snmp']['snmpd']['mibdirs'] = '/usr/share/snmp/mibs'
